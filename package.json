@@ -1,0 +1,49 @@
+{
+  "name": "@hemlock5738/esbuild-plugin-gas",
+  "version": "1.0.0",
+  "description": "esbuild plugin for Google Apps Script.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hemlock5738/esbuild-plugin-gas.git"
+  },
+  "license": "MIT",
+  "author": "hemlock5738",
+  "type": "module",
+  "main": "./dist/script/index.cjs",
+  "module": "./dist/module/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "npm run build:types && npm run build:esbuild",
+    "build:esbuild": "tsx build.ts",
+    "build:types": "tsc",
+    "check": "biome check --write --unsafe --no-errors-on-unmatched .",
+    "prepare": "lefthook install",
+    "prepublishOnly": "npm run build",
+    "sort": "sort-package-json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.25.7",
+    "@babel/parser": "^7.25.8",
+    "@babel/traverse": "^7.25.7",
+    "esbuild": "^0.24.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@types/babel__generator": "^7.6.8",
+    "@types/babel__traverse": "^7.20.6",
+    "@types/node": "^22.7.5",
+    "lefthook": "^1.7.18",
+    "rimraf": "^6.0.1",
+    "sort-package-json": "^2.10.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

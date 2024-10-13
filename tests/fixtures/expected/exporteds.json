@@ -1,0 +1,22 @@
+{
+  "add": {
+    "exportedName": "add",
+    "type": "function"
+  },
+  "div_exports": {
+    "exportedName": "div",
+    "type": "variable"
+  },
+  "mod_default": {
+    "exportedName": "modulo",
+    "type": "variable"
+  },
+  "mul": {
+    "exportedName": "mul",
+    "type": "function"
+  },
+  "sub": {
+    "exportedName": "sub",
+    "type": "variable"
+  }
+}

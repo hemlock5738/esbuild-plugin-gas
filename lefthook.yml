@@ -1,0 +1,12 @@
+pre-commit:
+  commands:
+    check:
+      stage_fixed: true
+      glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}'
+      run: npx @biomejs/biome check --write --unsafe --no-errors-on-unmatched {staged_files}
+    sort:
+      stage_fixed: true
+      glob: 'package.json'
+      run: npx sort-package-json
+
+rc: ~/.lefthookrc
